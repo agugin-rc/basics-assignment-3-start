@@ -1,0 +1,15 @@
+<div class="container" style="margin-top: 20px;">
+    <div class="row">
+        <div class="col-xs-12">
+            <button class="btn btn-primary"
+                (click)="toggleDetailsVisibility()">Display Details</button>
+            <p *ngIf="isDetailsVisible">Secret Password = 'tuna'</p>
+            <ol>
+                <li *ngFor="let log of logs"
+                [ngStyle]="log >= 5 && { backgroundColor: 'blue' }"
+                [ngClass]="{'text-color': log >= 5}"
+                >{{ log }}</li>
+            </ol>
+        </div>
+    </div>
+</div>
